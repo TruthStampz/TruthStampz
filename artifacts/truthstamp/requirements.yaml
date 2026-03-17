@@ -1,0 +1,18 @@
+packages:
+  "framer-motion": "For smooth page transitions and step-by-step analysis animations"
+  "react-dropzone": "For the drag-and-drop file upload interface"
+  "clsx": "For conditional class name merging"
+  "tailwind-merge": "For merging tailwind classes safely"
+  "lucide-react": "For icons"
+
+images:
+  - path: "artifacts/truthstamp/public/images/hero-bg.png"
+    description: "Futuristic dark navy abstract glowing geometric grid with subtle emerald and teal laser light beams intersecting, depth of field, high-tech security vibe"
+    aspect_ratio: "16:9"
+  - path: "artifacts/truthstamp/public/images/seal.png"
+    description: "A minimalist digital security seal or stamp graphic in glowing emerald green, futuristic line art on transparent background"
+    aspect_ratio: "1:1"
+
+notes:
+  - App is fully mock-data driven for this demo, no backend required.
+  - App defaults to dark mode per the design requirement.
