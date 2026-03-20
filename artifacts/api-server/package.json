@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development PORT=3000 tsx ./src/index.ts",
+    "dev": "NODE_ENV=development tsx ./src/index.ts",
+    "prebuild": "tsc --build ../../tsconfig.json",
     "build": "tsx ./build.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
