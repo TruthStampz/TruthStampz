@@ -1,5 +1,6 @@
 import path from "path";
 import { fileURLToPath } from "url";
+import { execSync } from "child_process";
 import { build as esbuild } from "esbuild";
 import { rm, readFile } from "fs/promises";
 
@@ -38,6 +39,10 @@ const allowlist = [
 ];
 
 async function buildAll() {
+  // Build lib declarations first so tsc can resolve workspace references
+  const rootTsconfig = path.resolve(__dirname, "../../tsconfig.json");
+  execSync(`tsc --build --force "${rootTsconfig}"`, { stdio: "inherit" });
+
   const distDir = path.resolve(__dirname, "dist");
   await rm(distDir, { recursive: true, force: true });
 
